@@ -7,7 +7,7 @@ import (
 const countOfCardValuesPerSuit int = 104
 
 func TestGetDeckOfCards(t *testing.T) {
-	suitCount := make(map[Suit]int)
+	suitCount := make(map[CardType]int)
 	deckOfCards := GetDeckOfCards()
 	// testing the number of cards
 	if len(deckOfCards) != 54 {
@@ -16,11 +16,11 @@ func TestGetDeckOfCards(t *testing.T) {
 
 	//summing the count of values per suit
 	for _, card := range deckOfCards {
-		value, ok := suitCount[card.suit]
+		value, ok := suitCount[card.Suit]
 		if ok {
-			suitCount[card.suit] = value + int(card.value)
+			suitCount[card.Suit] = value + int(card.Value)
 		} else {
-			suitCount[card.suit] = int(card.value)
+			suitCount[card.Suit] = int(card.Value)
 		}
 	}
 

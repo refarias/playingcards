@@ -1,15 +1,15 @@
 package playingcards
 
-type Suit string
+type CardType string
 
 const (
-	HEART   Suit = "heart"
-	DIAMOND Suit = "diamond"
-	CLUB    Suit = "club"
-	SPADE   Suit = "spade"
+	HEART   CardType = "heart"
+	DIAMOND CardType = "diamond"
+	CLUB    CardType = "club"
+	SPADE   CardType = "spade"
 )
 
-var Suits = []Suit{
+var Suits = []CardType{
 	HEART,
 	DIAMOND,
 	CLUB,
